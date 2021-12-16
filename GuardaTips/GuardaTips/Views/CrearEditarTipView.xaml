@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuardaTips.Views.CrearEditarTipView"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*, auto" 
+              RowDefinitions="auto,auto,auto,auto,auto"
+              Padding="20, 50,20,20">
+            <Label Text="Lista de Tips"
+                   HorizontalOptions="Center"
+                   TextColor="#212C40"
+                   FontSize="Title"                 
+                   Margin="0,15,0,20"/>
+            <DatePicker Date="{Binding FechaActualizacion, Mode=TwoWay}"
+                        VerticalOptions="End"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,30,0,0"
+                        Grid.Row="1">
+                <DatePicker.Behaviors>
+                    <!--<xct:EventToCommandBehavior
+                            EventName="DateSelected"
+                            Command="{Binding DateSelectedCommand}" />-->
+                </DatePicker.Behaviors>
+            </DatePicker>
+            <Image Source="icon_calendario.png"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Margin="0,30,0,0"/>                        
+            <Entry Text="{Binding Titulo, 
+                   Mode=TwoWay}"
+                   Placeholder="Titulo"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   TextColor="#212C40"
+                   BackgroundColor="#FAFCFF"
+                   Margin="0,40,0,0"/>
+            <Entry Text="{Binding Descripcion, 
+                   Mode=TwoWay}"
+                   Placeholder="Descripcion"
+                   Grid.Row="3"
+                   Grid.ColumnSpan="2"
+                   TextColor="#212C40"
+                   BackgroundColor="#FAFCFF"
+                   Margin="0,40,0,0"
+                   VerticalOptions="Start"/>
+            <Button Text="Guardar"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#212C40"
+                    CornerRadius="10"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="4"
+                    Margin="0,40,0,0"
+                    Command="{Binding GuardarTipCommand}"/>
+        </Grid>        
+    </ContentPage.Content>
+</ContentPage>
