@@ -7,22 +7,16 @@
         <Grid ColumnDefinitions="*, auto" 
               RowDefinitions="auto,auto,auto,auto,auto"
               Padding="20, 50,20,20">
-            <Label Text="Lista de Tips"
+            <Label Text="Crear Tips"
                    HorizontalOptions="Center"
                    TextColor="#212C40"
-                   FontSize="Title"                 
+                   FontSize="60"                 
                    Margin="0,15,0,20"/>
-            <DatePicker Date="{Binding FechaActualizacion, Mode=TwoWay}"
+            <DatePicker Date="{Binding FechaActualizacion, Mode=TwoWay, StringFormat='{}{0:dd/MM/yyyy}'}"
                         VerticalOptions="End"
                         HorizontalOptions="FillAndExpand"
                         Margin="0,30,0,0"
-                        Grid.Row="1">
-                <DatePicker.Behaviors>
-                    <!--<xct:EventToCommandBehavior
-                            EventName="DateSelected"
-                            Command="{Binding DateSelectedCommand}" />-->
-                </DatePicker.Behaviors>
-            </DatePicker>
+                        Grid.Row="1"/>
             <Image Source="icon_calendario.png"
                    Grid.Column="1"
                    Grid.Row="1"

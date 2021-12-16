@@ -3,23 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuardaTips.Views.VerTipView">
     <ContentPage.Content>
-        <Grid RowDefinitions="auto,auto,auto,auto"
+        <Grid RowDefinitions="auto,auto,auto,auto,auto"
               Padding="20">
+            <Label Text="Editar Tips"
+                   HorizontalOptions="Center"
+                   TextColor="#212C40"
+                   FontSize="50"
+                   Margin="0,15,0,20"/>
             <DatePicker Date="{Binding FechaActualizacion, Mode=TwoWay, StringFormat='{}{0:dd/MM/yyyy}'}"
                    HorizontalOptions="Start"
                    TextColor="#212C40"
-                   FontSize="Subtitle"                 
-                   Margin="0,100,0,5"/>
+                   FontSize="30"                 
+                   Margin="0,150,0,5"/>
             <Entry Text="{Binding Titulo, Mode=TwoWay}"
                    HorizontalOptions="Start"
                    TextColor="#212C40"
-                   FontSize="Large"                 
-                   Margin="0,15,0,5"
+                   FontSize="40"                 
+                   Margin="0,0,0,5"
                    Grid.Row="1"/>
             <Entry Text="{Binding Descripcion, Mode=TwoWay}"
                    HorizontalOptions="Start"
                    TextColor="#212C40"
-                   FontSize="Body"                 
+                   FontSize="20"                 
                    Margin="0,15,0,5"
                    Grid.Row="2"/>
             <Button Text="Editar"
